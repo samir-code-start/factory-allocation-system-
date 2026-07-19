@@ -160,7 +160,7 @@ def main():
         
         # Display nicely grouped by region
         for region, group in result.groupby('Region', sort=False): # sort=False keeps the previous sorting (which is by predicted lead time)
-            print(f"\\n--- Region: {region} ---")
+            print(f"\n--- Region: {region} ---")
             display_df = group[['Factory', 'Is Current', 'Predicted Lead Time', 'Lead Time Change vs Current (%)', 'Distance', 'Risk Flag']]
             display_df = display_df.copy()
             # Format numbers
@@ -168,7 +168,7 @@ def main():
             display_df['Lead Time Change vs Current (%)'] = display_df['Lead Time Change vs Current (%)'].round(2).astype(str) + '%'
             display_df['Distance'] = display_df['Distance'].round(2)
             print(display_df.to_string(index=False))
-        print("\\n")
+        print("\n")
 
 if __name__ == "__main__":
     main()
