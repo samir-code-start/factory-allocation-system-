@@ -6,10 +6,15 @@ import os
 # Ensure we can import from the current directory if run as a script
 import simulator
 
-def recommend_factory(product_name, priority="balanced"):
+def recommend_factory(product_name, priority="balanced", target_region=None):
     # Run the simulation for the product
     sim_results = simulator.simulate_product(product_name)
     
+    if target_region:
+        sim_results = sim_results[sim_results['Region'] == target_region]
+        if sim_results.empty:
+            raise ValueError(f"Product '{product_name}' does not ship to region '{target_region}'")
+            
     total_regions = sim_results['Region'].nunique()
     current_factory = sim_results[sim_results['Is Current']]['Factory'].iloc[0]
     
@@ -31,16 +36,16 @@ def recommend_factory(product_name, priority="balanced"):
     grouped['Confidence Score (%)'] = np.clip(100 - grouped['std_pct_change'], 0, 100).round(1)
     
     # Calculate Composite Score
-    # speed_score = -avg_pct_change (positive is good, negative is bad)
-    grouped['speed_score'] = -grouped['avg_pct_change']
+    # speed_score = -avg_pct_change * 5 (to scale it closer to 0-100 range, a 20% improvement = 100)
+    grouped['speed_score'] = -grouped['avg_pct_change'] * 5
     
     # risk_score = -(risk_count / total_regions) * 100 (0 is perfect, -100 is terrible)
     grouped['risk_score'] = -(grouped['risk_count'] / total_regions) * 100
     
     if priority == "speed":
-        w_speed, w_risk = 0.8, 0.2
+        w_speed, w_risk = 0.9, 0.1
     elif priority == "profit":
-        w_speed, w_risk = 0.2, 0.8
+        w_speed, w_risk = 0.1, 0.9
     else: # balanced
         w_speed, w_risk = 0.5, 0.5
         
