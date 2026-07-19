@@ -1,75 +1,75 @@
 Factory,Region,Ship Mode,lead_time_days,distance,order_count,cluster_label
-Lot's O' Nuts,Atlantic,First Class,6.56,2029.9619899999998,300,Slow Routes
-Lot's O' Nuts,Atlantic,Same Day,5.123595505617978,2029.96199,89,Slow Routes
+Lot's O' Nuts,Atlantic,First Class,6.56,2029.9619899999998,300,High-Performing Regions
+Lot's O' Nuts,Atlantic,Same Day,5.123595505617978,2029.96199,89,High-Performing Regions
 Lot's O' Nuts,Atlantic,Second Class,8.625,2029.96199,304,Congested Regions
 Lot's O' Nuts,Atlantic,Standard Class,11.506198347107437,2029.96199,968,Congested Regions
-Lot's O' Nuts,Gulf,First Class,5.063492063492063,1295.276468,126,Slow Routes
+Lot's O' Nuts,Gulf,First Class,5.063492063492063,1295.276468,126,High-Performing Regions
 Lot's O' Nuts,Gulf,Same Day,3.5714285714285716,1295.276468,49,Fast Routes
-Lot's O' Nuts,Gulf,Second Class,7.027322404371585,1295.276468,183,Slow Routes
+Lot's O' Nuts,Gulf,Second Class,7.027322404371585,1295.276468,183,High-Performing Regions
 Lot's O' Nuts,Gulf,Standard Class,10.174397031539888,1295.276468,539,Congested Regions
 Lot's O' Nuts,Interior,First Class,4.618181818181818,1050.650865,165,Fast Routes
 Lot's O' Nuts,Interior,Same Day,3.03125,1050.650865,64,Fast Routes
-Lot's O' Nuts,Interior,Second Class,6.64,1050.650865,275,High-Performing Regions
-Lot's O' Nuts,Interior,Standard Class,9.49204406364749,1050.650865,817,High-Performing Regions
+Lot's O' Nuts,Interior,Second Class,6.64,1050.650865,275,Slow Routes
+Lot's O' Nuts,Interior,Standard Class,9.49204406364749,1050.650865,817,Slow Routes
 Lot's O' Nuts,Pacific,First Class,3.5953177257525084,545.5075533,299,Fast Routes
 Lot's O' Nuts,Pacific,Same Day,2.1262135922330097,545.5075533,103,Fast Routes
-Lot's O' Nuts,Pacific,Second Class,5.631284916201118,545.5075533,358,High-Performing Regions
-Lot's O' Nuts,Pacific,Standard Class,8.620132953466287,545.5075533,1053,High-Performing Regions
+Lot's O' Nuts,Pacific,Second Class,5.631284916201118,545.5075533,358,Slow Routes
+Lot's O' Nuts,Pacific,Standard Class,8.620132953466287,545.5075533,1053,Slow Routes
 Secret Factory,Atlantic,First Class,3.7058823529411766,785.2031668,17,Fast Routes
 Secret Factory,Atlantic,Same Day,3.0,785.2031668,3,Fast Routes
-Secret Factory,Atlantic,Second Class,6.5,785.2031668,8,High-Performing Regions
-Secret Factory,Atlantic,Standard Class,9.386363636363637,785.2031668,44,High-Performing Regions
+Secret Factory,Atlantic,Second Class,6.5,785.2031668,8,Slow Routes
+Secret Factory,Atlantic,Standard Class,9.386363636363637,785.2031668,44,Slow Routes
 Secret Factory,Gulf,First Class,4.4,790.9446495,5,Fast Routes
 Secret Factory,Gulf,Same Day,4.0,790.9446495,1,Fast Routes
-Secret Factory,Gulf,Second Class,5.916666666666667,790.9446494999999,12,High-Performing Regions
-Secret Factory,Gulf,Standard Class,8.894736842105264,790.9446495,19,High-Performing Regions
+Secret Factory,Gulf,Second Class,5.916666666666667,790.9446494999999,12,Slow Routes
+Secret Factory,Gulf,Standard Class,8.894736842105264,790.9446495,19,Slow Routes
 Secret Factory,Interior,First Class,3.3,252.5813178,10,Fast Routes
 Secret Factory,Interior,Same Day,1.3333333333333333,252.5813178,3,Fast Routes
 Secret Factory,Interior,Second Class,5.444444444444445,252.5813178,9,Fast Routes
-Secret Factory,Interior,Standard Class,8.130434782608695,252.58131780000002,23,High-Performing Regions
-Secret Factory,Pacific,First Class,5.2,1595.998443,15,Slow Routes
-Secret Factory,Pacific,Same Day,5.0,1595.998443,4,Slow Routes
-Secret Factory,Pacific,Second Class,7.571428571428571,1595.998443,14,Slow Routes
+Secret Factory,Interior,Standard Class,8.130434782608695,252.58131780000002,23,Slow Routes
+Secret Factory,Pacific,First Class,5.2,1595.998443,15,High-Performing Regions
+Secret Factory,Pacific,Same Day,5.0,1595.998443,4,High-Performing Regions
+Secret Factory,Pacific,Second Class,7.571428571428571,1595.998443,14,High-Performing Regions
 Secret Factory,Pacific,Standard Class,10.833333333333334,1595.998443,30,Congested Regions
 Sugar Shack,Atlantic,First Class,4.0,1184.483295,2,Fast Routes
 Sugar Shack,Atlantic,Same Day,4.0,1184.483295,1,Fast Routes
-Sugar Shack,Atlantic,Second Class,8.0,1184.483295,1,High-Performing Regions
+Sugar Shack,Atlantic,Second Class,8.0,1184.483295,1,Slow Routes
 Sugar Shack,Atlantic,Standard Class,9.642857142857142,1184.483295,14,Congested Regions
 Sugar Shack,Gulf,Second Class,8.0,1293.111823,1,Congested Regions
 Sugar Shack,Gulf,Standard Class,10.0,1293.111823,3,Congested Regions
 Sugar Shack,Interior,First Class,3.5,563.6233919,2,Fast Routes
-Sugar Shack,Interior,Second Class,6.0,563.6233919,2,High-Performing Regions
-Sugar Shack,Interior,Standard Class,8.25,563.6233919,4,High-Performing Regions
+Sugar Shack,Interior,Second Class,6.0,563.6233919,2,Slow Routes
+Sugar Shack,Interior,Standard Class,8.25,563.6233919,4,Slow Routes
 Sugar Shack,Pacific,Second Class,8.0,1425.048215,1,Congested Regions
 Sugar Shack,Pacific,Standard Class,10.5,1425.048215,2,Congested Regions
 The Other Factory,Atlantic,First Class,4.0,814.1042754,5,Fast Routes
 The Other Factory,Atlantic,Same Day,2.0,814.1042754,2,Fast Routes
-The Other Factory,Atlantic,Second Class,6.5,814.1042754,8,High-Performing Regions
-The Other Factory,Atlantic,Standard Class,9.391304347826088,814.1042754,23,High-Performing Regions
+The Other Factory,Atlantic,Second Class,6.5,814.1042754,8,Slow Routes
+The Other Factory,Atlantic,Standard Class,9.391304347826088,814.1042754,23,Slow Routes
 The Other Factory,Gulf,First Class,4.0,353.3429346,4,Fast Routes
 The Other Factory,Gulf,Same Day,1.6666666666666667,353.3429346,3,Fast Routes
-The Other Factory,Gulf,Second Class,6.0,353.3429346,3,High-Performing Regions
-The Other Factory,Gulf,Standard Class,8.11111111111111,353.3429346,9,High-Performing Regions
+The Other Factory,Gulf,Second Class,6.0,353.3429346,3,Slow Routes
+The Other Factory,Gulf,Standard Class,8.11111111111111,353.3429346,9,Slow Routes
 The Other Factory,Interior,First Class,3.5,435.0445761,2,Fast Routes
 The Other Factory,Interior,Second Class,5.0,435.0445761,2,Fast Routes
-The Other Factory,Interior,Standard Class,9.0,435.0445761,7,High-Performing Regions
-The Other Factory,Pacific,First Class,5.166666666666667,1674.223381,6,Slow Routes
-The Other Factory,Pacific,Same Day,3.0,1674.223381,2,Slow Routes
-The Other Factory,Pacific,Second Class,7.375,1674.223381,8,Slow Routes
+The Other Factory,Interior,Standard Class,9.0,435.0445761,7,Slow Routes
+The Other Factory,Pacific,First Class,5.166666666666667,1674.223381,6,High-Performing Regions
+The Other Factory,Pacific,Same Day,3.0,1674.223381,2,High-Performing Regions
+The Other Factory,Pacific,Second Class,7.375,1674.223381,8,High-Performing Regions
 The Other Factory,Pacific,Standard Class,11.375,1674.223381,16,Congested Regions
 Wicked Choccy's,Atlantic,First Class,3.5872093023255816,556.7755484,172,Fast Routes
 Wicked Choccy's,Atlantic,Same Day,1.9375,556.7755484,64,Fast Routes
-Wicked Choccy's,Atlantic,Second Class,5.634361233480176,556.7755484,227,High-Performing Regions
-Wicked Choccy's,Atlantic,Standard Class,8.573569482288828,556.7755484,734,High-Performing Regions
+Wicked Choccy's,Atlantic,Second Class,5.634361233480176,556.7755484,227,Slow Routes
+Wicked Choccy's,Atlantic,Standard Class,8.573569482288828,556.7755484,734,Slow Routes
 Wicked Choccy's,Gulf,First Class,3.757575757575758,546.155462,99,Fast Routes
 Wicked Choccy's,Gulf,Same Day,2.066666666666667,546.155462,30,Fast Routes
-Wicked Choccy's,Gulf,Second Class,5.623076923076923,546.155462,130,High-Performing Regions
-Wicked Choccy's,Gulf,Standard Class,8.497524752475247,546.155462,404,High-Performing Regions
+Wicked Choccy's,Gulf,Second Class,5.623076923076923,546.155462,130,Slow Routes
+Wicked Choccy's,Gulf,Standard Class,8.497524752475247,546.155462,404,Slow Routes
 Wicked Choccy's,Interior,First Class,4.298387096774194,948.1977795,124,Fast Routes
 Wicked Choccy's,Interior,Same Day,2.849056603773585,948.1977795,53,Fast Routes
-Wicked Choccy's,Interior,Second Class,6.559322033898305,948.1977795,177,High-Performing Regions
-Wicked Choccy's,Interior,Standard Class,9.296979865771812,948.1977795000001,596,High-Performing Regions
-Wicked Choccy's,Pacific,First Class,7.0256410256410255,2223.527948,195,Slow Routes
-Wicked Choccy's,Pacific,Same Day,5.657894736842105,2223.527948,76,Slow Routes
+Wicked Choccy's,Interior,Second Class,6.559322033898305,948.1977795,177,Slow Routes
+Wicked Choccy's,Interior,Standard Class,9.296979865771812,948.1977795000001,596,Slow Routes
+Wicked Choccy's,Pacific,First Class,7.0256410256410255,2223.527948,195,High-Performing Regions
+Wicked Choccy's,Pacific,Same Day,5.657894736842105,2223.527948,76,High-Performing Regions
 Wicked Choccy's,Pacific,Second Class,9.015625,2223.527948,256,Congested Regions
 Wicked Choccy's,Pacific,Standard Class,11.970552147239264,2223.527948,815,Congested Regions

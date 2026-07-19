@@ -43,42 +43,22 @@ def main():
         avg_order_volume=('order_count', 'mean')
     ).reset_index()
     
-    # Calculate median to determine high/low
-    median_lead_time = cluster_stats['avg_lead_time'].median()
-    median_volume = cluster_stats['avg_order_volume'].median()
+    # Rank all 4 clusters directly by avg lead_time_days first (ascending = faster)
+    cluster_stats = cluster_stats.sort_values('avg_lead_time', ascending=True)
     
-    def assign_label(row):
-        is_high_lead_time = row['avg_lead_time'] >= median_lead_time
-        is_high_volume = row['avg_order_volume'] >= median_volume
-        
-        if is_high_volume and not is_high_lead_time:
-            return "High-Performing Regions"
-        elif is_high_volume and is_high_lead_time:
-            return "Congested Regions"
-        elif not is_high_volume and not is_high_lead_time:
-            return "Fast Routes"
-        else: # not high volume and high lead time
-            return "Slow Routes"
-            
-    cluster_stats['cluster_label'] = cluster_stats.apply(assign_label, axis=1)
+    # Split into fast half (top 2) and slow half (bottom 2) based strictly on lead time
+    fast_half = cluster_stats.iloc[:2].copy()
+    slow_half = cluster_stats.iloc[2:].copy()
     
-    # Ensure unique labels if the median split results in duplicates (e.g. if medians don't neatly divide 4 clusters into 4 categories)
-    # A more robust way to ensure 1 of each of the 4 labels:
-    # Sort clusters by order volume (descending) -> Top 2 are High Volume, Bottom 2 are Low Volume
-    # Then within each volume group, sort by lead time (descending) -> Top 1 is High Lead Time, Bottom 1 is Low Lead Time
+    # Within fast half, use volume as a secondary descriptor
+    fast_half = fast_half.sort_values('avg_order_volume', ascending=False)
+    fast_half['cluster_label'] = ["High-Performing Regions", "Fast Routes"]
     
-    # Let's do the robust mapping:
-    cluster_stats = cluster_stats.sort_values('avg_order_volume', ascending=False)
-    high_vol_clusters = cluster_stats.iloc[:2].copy()
-    low_vol_clusters = cluster_stats.iloc[2:].copy()
+    # Within slow half, use volume as a secondary descriptor
+    slow_half = slow_half.sort_values('avg_order_volume', ascending=False)
+    slow_half['cluster_label'] = ["Congested Regions", "Slow Routes"]
     
-    high_vol_clusters = high_vol_clusters.sort_values('avg_lead_time', ascending=False)
-    high_vol_clusters['cluster_label'] = ["Congested Regions", "High-Performing Regions"]
-    
-    low_vol_clusters = low_vol_clusters.sort_values('avg_lead_time', ascending=False)
-    low_vol_clusters['cluster_label'] = ["Slow Routes", "Fast Routes"]
-    
-    final_labels = pd.concat([high_vol_clusters, low_vol_clusters])[['cluster_id', 'cluster_label']]
+    final_labels = pd.concat([fast_half, slow_half])[['cluster_id', 'cluster_label']]
     
     # Merge labels back
     grouped = grouped.merge(final_labels, on='cluster_id')
